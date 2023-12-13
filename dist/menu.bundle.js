@@ -2370,12 +2370,31 @@ module.exports = styleTagTransform;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module is referenced by other modules so it can't be inlined
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+/*!*******************************!*\
+  !*** ./src/game/game-menu.js ***!
+  \*******************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../index.js */ "./src/index.js");
+
+const containerMenu = document.querySelector("#container-menu");
+const containerPlay = document.querySelector("#container-play");
+let startGame = false;
+containerMenu.innerHTML = `<button class="button button-play"> Jouer </button>`;
+const buttonPlay = containerMenu.querySelector(".button-play");
+buttonPlay.addEventListener("click", event => {
+  event.stopPropagation();
+  containerMenu.classList.add("off");
+  containerPlay.classList.remove("off");
+  if (!startGame) {
+    startGame = true;
+    requestAnimationFrame(_index_js__WEBPACK_IMPORTED_MODULE_0__.gameLoop);
+  }
+});
+})();
+
 /******/ })()
 ;
-//# sourceMappingURL=main.bundle.js.map
+//# sourceMappingURL=menu.bundle.js.map
