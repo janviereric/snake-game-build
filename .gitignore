@@ -3,7 +3,6 @@
 dist/*.map
 node_modules
 src
-babel.config.js
 package-lock.json
 package.json
-webpack.config.js
+vite.config.js
