@@ -17,8 +17,9 @@
     ></script>
     <link rel="icon" type="image/x-icon" href="/assets/favicon-clbgCrpV.ico" />
     <title>Snake Game</title>
-    <script type="module" crossorigin src="/assets/index-O20BMJ6G.js"></script>
+    <script type="module" crossorigin src="/assets/game-bTivBRaJ.js"></script>
     <link rel="modulepreload" crossorigin href="/assets/button-params-uRIzd_7W.js">
+    <link rel="modulepreload" crossorigin href="/assets/keyboard-key-iFf925Qx.js">
     <link rel="stylesheet" crossorigin href="/assets/button-params-is5jBX8Q.css">
   </head>
   <body>
@@ -28,21 +29,20 @@
       </div>
     </header>
     <main>
-      <div id="container-menu">
+      <div id="container-menu" class="off">
         <div class="calc">
           <div class="menu">
             <div class="menu-home">
               <div id="menu-image"></div>
               <div class="menu-buttons">
-                <button id="button-index" class="button-primary">
-                  ▷ Jouer
-                </button>
+                <button id="button-game" class="button-primary">▷ Jouer</button>
                 <div id="button-params" class="button-secondary"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div id="container-keyboard-key"></div>
       <div id="container-game">
         <canvas width="600px" height="600px"></canvas>
       </div>
